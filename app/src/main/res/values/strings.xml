@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Minterm Minimiza</string>
+    <string name="add_minterms">Add minterms</string>
+    <string name="enter_the_minterms">Enter the minterms</string>
+    <string name="add_don_t_cares">Add don\'t cares</string>
+    <string name="enter_the_don_t_cares">Enter the don\'t cares</string>
+    <string name="no_don_t_cares">No don\'t cares</string>
+    <string name="lets_minimize_it">Let\'s Minimize It!</string>
+    <string name="method_of_entering_minterms">Separate each minterm with a space or a comma.</string>
+    <string name="your_simplified_literals">Ta Daaa! Here\'re Your Simplified Literals.</string>
+</resources>
