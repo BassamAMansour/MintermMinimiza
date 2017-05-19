@@ -23,6 +23,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
+            android:contentDescription=""
             android:cropToPadding="true"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/mm_logo" />
@@ -34,12 +35,27 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:background="@color/colorAccent" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="Welcome to Minterm Minimiza app.\nEnjoy Simplifying!" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_to_minterm_minimiza_app" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/by_ahmed_hussein_bassam_aiman"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 
@@ -63,7 +79,8 @@
             android:ems="10"
             android:gravity="center"
             android:hint="@string/enter_the_minterms"
-            android:inputType="textMultiLine|textNoSuggestions|number" />
+            android:inputType="textMultiLine|textNoSuggestions|number"
+            android:selectAllOnFocus="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -80,7 +97,8 @@
             android:ems="10"
             android:gravity="center"
             android:hint="@string/enter_the_don_t_cares"
-            android:inputType="textMultiLine|textNoSuggestions|number" />
+            android:inputType="textMultiLine|textNoSuggestions|number"
+            android:selectAllOnFocus="true" />
 
         <CheckBox
             android:id="@+id/dont_care_checkbox"

@@ -346,10 +346,6 @@ public class FirstStepMinimizer implements IFirstStepMinimizer {
     }
 
     private boolean isFromPowersOfTwo(int value) {
-        if (value > 0 && ((value & -value) == value)) {
-            return true;
-        } else {
-            return false;
-        }
+        return value > 0 && ((value & -value) == value);
     }
 }

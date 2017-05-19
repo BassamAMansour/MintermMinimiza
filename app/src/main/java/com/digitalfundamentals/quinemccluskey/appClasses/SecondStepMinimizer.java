@@ -42,7 +42,7 @@ public class SecondStepMinimizer {
                 List no_ones = this.PositionOfOnesInverted(j);
                 int tmp_sum = implicant.get(i).getValue();
                 for (int k = 0; k < no_ones.size(); k++) {
-                    tmp_sum += (int) implicant.get(i).getDifferenceList().get((int) no_ones.get(k));
+                    tmp_sum += implicant.get(i).getDifferenceList().get((int) no_ones.get(k));
                 }
                 expandedterm[i].add(tmp_sum);
             }
@@ -144,12 +144,12 @@ public class SecondStepMinimizer {
         List<Integer> result = new LinkedList<Integer>();
         result.add((Integer) implicant.get(0));
         for (int i = 1; i < implicant.size(); i++) {
-            if (Integer.bitCount((int) result.get(0)) > Integer.bitCount((int) implicant.get(i))) {
+            if (Integer.bitCount(result.get(0)) > Integer.bitCount((int) implicant.get(i))) {
                 while (!result.isEmpty()) {
                     result.remove(0);
                 }
                 result.add((int) implicant.get(i));
-            } else if (Integer.bitCount((int) result.get(0)) == Integer.bitCount((int) implicant.get(i))) {
+            } else if (Integer.bitCount(result.get(0)) == Integer.bitCount((int) implicant.get(i))) {
                 result.add((int) implicant.get(i));
             }
         }
